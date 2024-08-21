@@ -1,0 +1,62 @@
+cuda-python==12.2.1
+cudf-cu12 @ https://pypi.nvidia.com/cudf-cu12/cudf_cu12-24.4.1-cp310-cp310-manylinux_2_28_x86_64.whl#sha256=57366e7ef09dc63e0b389aff20df6c37d91e2790065861ee31a4720149f5b694
+cufflinks==0.17.3
+cupy-cuda12x==12.2.0
+cvxopt==1.3.2
+cvxpy==1.5.2
+
+google==2.0.3
+google-ai-generativelanguage==0.6.6
+google-api-core==2.19.1
+google-api-python-client==2.137.0
+google-auth==2.27.0
+google-auth-httplib2==0.2.0
+google-auth-oauthlib==1.2.1
+google-cloud-aiplatform==1.59.0
+google-cloud-bigquery==3.25.0
+google-cloud-bigquery-connection==1.15.5
+google-cloud-bigquery-storage==2.25.0
+google-cloud-bigtable==2.26.0
+google-cloud-core==2.4.1
+google-cloud-datastore==2.19.0
+google-cloud-firestore==2.16.1
+google-cloud-functions==1.16.5
+google-cloud-iam==2.15.2
+google-cloud-language==2.13.4
+google-cloud-pubsub==2.23.0
+google-cloud-resource-manager==1.12.5
+google-cloud-storage==2.8.0
+google-cloud-translate==3.15.5
+google-colab @ file:///colabtools/dist/google_colab-1.0.0.tar.gz#sha256=09e33925c8743b2733e1828ce915e27e36e3e0af644b80fff028895f3e208fc8
+google-crc32c==1.5.0
+google-generativeai==0.7.2
+google-pasta==0.2.0
+google-resumable-media==2.7.2
+googleapis-common-protos==1.63.2
+googledrivedownloader==0.4
+
+streamlit==1.37.1
+ultralytics==8.0.136
+pyngrok==7.2.0
+mediapipe==0.10.2
+fsspec==2024.6.1
+scipy==1.13.1
+matplotlib==3.7.1
+matplotlib-inline==0.1.7
+matplotlib-venn==0.11.10
+
+numpy==1.26.4
+pandas==2.1.4
+opencv-contrib-python==4.10.0.84
+opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
+
+
+
+torch @ https://download.pytorch.org/whl/cu121/torch-2.3.1%2Bcu121-cp310-cp310-linux_x86_64.whl#sha256=f0deb5d2f932a68ed54625ba140eddbf2af22be978ee19b9b63c986add6425b2
+torchaudio @ https://download.pytorch.org/whl/cu121/torchaudio-2.3.1%2Bcu121-cp310-cp310-linux_x86_64.whl#sha256=0b423f4ae3356f11f6723e8c77208ac3f9361a4f941e4cc08d86c32c137594bc
+torchsummary==1.5.1
+torchtext==0.18.0
+torchvision @ https://download.pytorch.org/whl/cu121/torchvision-0.18.1%2Bcu121-cp310-cp310-linux_x86_64.whl#sha256=e95ba5a2c616939281e01babf11664d6d1725e81bba57ef81f81c3e57e4d4151
+
+
