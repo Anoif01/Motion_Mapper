@@ -30,8 +30,9 @@ scatter_color = (32, 32, 244)  # Radius of the scatter points
 alpha_overlay = 0.65  # Transparency level of the overlay
 
 # Draw trajectory settings
-trajectory_thickness = 100  # Thickness of the trajectory lines
-trajectory_alpha = 0.65  # Transparency level of the overlay
+# trajectory_thickness = 100  # Thickness of the trajectory lines
+# trajectory_alpha = 0.65  # Transparency level of the overlay
+traj_radius = 50  # Radius of the trajectory circles
 
 # Draw heatmap settings
 heatmap_alpha = 0.35  # Transparency of heatmap overlay

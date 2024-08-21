@@ -46,14 +46,14 @@ def update_trajectories(trajectories, unique_skeletons, unique_skeleton_indices,
         # Update trajectories
         else:
             min_dist, min_id = np.inf, np.inf
-            pos = min([ len(trajectories[l]) for l in range(len(trajectories))])
+            updated_person_id = []
             # print(pos)
     
             # No additional person detected
             if len(unique_skeletons) <= len(trajectories):
                 # print('Less than or Same Person!!!')
                 for p in range(len(trajectories)):
-                    previous_x, previous_y, previous_yankel = trajectories[p][pos-3 : pos]
+                    previous_x, previous_y, previous_yankel = trajectories[p][-3:]
                     dist = calculate_distance(previous_x, previous_y, x_hip_center, y_hip_center)
                     # print(dist)
                     if dist < min_dist:
@@ -61,15 +61,25 @@ def update_trajectories(trajectories, unique_skeletons, unique_skeleton_indices,
                         min_id = p
                 if min_dist < 500:
                     trajectories[min_id] += [x_hip_center, y_hip_center, y_ankle_center]
+                    updated_person_id.append(min_id)
                     # print(trajectories)
+                    
+                # give non-updated person a negative position    
+                person_not_updated = [m for m in range(len(trajectories)) if m not in updated_person_id]
+                print('Not updated person id: ', person_not_updated)
+                for not_update_id in person_not_updated:
+                    previous_x, previous_y, previous_yankel = trajectories[not_update_id][-3:]
+                    trajectories[not_update_id] += [-previous_x, -previous_y, -previous_yankel]
+                    
             # Additional person detected.             
             else:
                 print('More Person!!!')
                 # diff = len(unique_skeletons) - len(trajectories)
     
                 min_dist, min_id = np.inf, 0.
+                updated_person_id = []
                 for p in range(len(trajectories)):
-                    previous_x, previous_y, previous_yankel = trajectories[p][pos-3 : pos]
+                    previous_x, previous_y, previous_yankel = trajectories[p][-3:]
                     dist = calculate_distance(previous_x, previous_y, x_hip_center, y_hip_center)
                     # print(dist)
                     if dist < min_dist:
@@ -77,6 +87,7 @@ def update_trajectories(trajectories, unique_skeletons, unique_skeleton_indices,
                         min_id = p
                 if min_dist < 500:
                     trajectories[min_id] += [x_hip_center, y_hip_center, y_ankle_center]
+                    updated_person_id.append(min_id)
                     # print(trajectories)
                 print(id_person)
     
@@ -84,8 +95,15 @@ def update_trajectories(trajectories, unique_skeletons, unique_skeleton_indices,
                     # new person detected!
                     print('New person added!')
                     trajectories[id_person] = [x_hip_center, y_hip_center, y_ankle_center]
+                    updated_person_id.append(id_person)
                         # print(len(trajectories)+1, trajectories[len(trajectories)+1])
                 print(trajectories)
+                
+                person_not_updated = [m for m in range(len(trajectories)) if m not in updated_person_id]
+                print('Not updated person id: ', person_not_updated)
+                for not_update_id in person_not_updated:
+                    previous_x, previous_y, previous_yankel = trajectories[not_update_id][-3:]
+                    trajectories[not_update_id] += [-previous_x, -previous_y, -previous_yankel]
 
     return trajectories
 
@@ -147,6 +165,51 @@ def gaussian_smooth(points, sigma=1):
     for i in range(len(smoothed_x)):
         smoothed_points += [smoothed_x[i], points_y[i], smoothed_y_ankle[i]]
     return smoothed_points
+
+def draw_trajectories(annotated_frame, trajectories, generate_colors, check_negative_in_list, radius=60):
+    """
+    Draws the trajectories for each object using circles.
+
+    Parameters:
+    - annotated_frame: The frame on which the trajectories will be drawn.
+    - trajectories: A dictionary where each key is an object ID, and the value is a list of (x, y) coordinates representing the trajectory.
+    - generate_colors: A function that generates a list of colors for the trajectories.
+    - check_negative_in_list: A function that checks for negative values in the trajectory list.
+    - radius: The radius of the circles used to represent the trajectory points.
+
+    Returns:
+    - annotated_frame: The frame with the drawn trajectories.
+    """
+
+    # Generate colors for each object based on the number of trajectories
+    bgr_colors = generate_colors(len(trajectories))
+
+    # Iterate through each object's trajectory
+    for object_id, points in trajectories.items():
+        # Limit the number of points to the last 30
+        if len(points) > 30:
+            points = points[-30:]
+            
+        # points = remove_outliers(points)
+        # smoothed_points = gaussian_smooth(points, sigma=1)
+        smoothed_points = points
+
+        # Check how many points have negative coordinates
+        count_neg = check_negative_in_list(smoothed_points)
+
+        # Draw the trajectory points as circles
+        for i in range(0, len(points), 3):
+            if count_neg <= 15:
+                # Convert the points to absolute values if there are few negative values
+                pt1 = tuple([int(abs(smoothed_points[i])), int(abs(smoothed_points[i+2]))])
+            else:
+                pt1 = tuple([int(smoothed_points[i]), int(smoothed_points[i+2])])
+
+            color1 = bgr_colors[object_id]
+            # Draw the circle representing the trajectory point
+            annotated_frame = cv2.circle(annotated_frame, pt1, radius=radius, color=color1, thickness=-1)
+
+    return annotated_frame
 
 def draw_gradient_line(img, pt1, pt2, color1, color2, thickness=2, alpha=0.5):
     """

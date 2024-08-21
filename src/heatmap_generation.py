@@ -24,9 +24,9 @@ def calculate_speeds(trajectories, frame_time):
     """
     speeds = {}
     for person_id, points in trajectories.items():
-        points_x= np.array([points[p] for p in range(0, len(points), 3)])
-        points_y= np.array([points[p] for p in range(1, len(points), 3)])
-        points_y_ankle= np.array([points[p] for p in range(2, len(points), 3)])
+        points_x= np.array([points[p] for p in range(0, len(points), 3) if points[p]>0])
+        points_y= np.array([points[p] for p in range(1, len(points), 3) if points[p]>0])
+        points_y_ankle= np.array([points[p] for p in range(2, len(points), 3) if points[p]>0])
 
         speeds[person_id] = []
         for i in range(1, len(points_x)):

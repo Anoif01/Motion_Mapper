@@ -66,6 +66,25 @@ def reduce_frame_rate(video_path, output_video_path, target_fps):
     return output_video_path
 
 
+def check_negative_in_list(A):
+    """
+    Count the number of negative elements in a list. 
+
+    Parameters:
+    - A: List of points.
+
+    Returns:
+    - count_negative: Number of negative elements.
+    """
+    negative_numbers = list(filter(lambda x: x < 0, A))
+    count_negative = 0
+
+    # 判断是否有小于0的数并计算数量
+    if negative_numbers:
+        count_negative = len(negative_numbers)
+    
+    return count_negative
+
 # Keypoint dictionary mapping for human pose estimation
 keypoint_dict = {
     "NOSE": 0, "LEFT_EYE": 1, "RIGHT_EYE": 2, "LEFT_EAR": 3, "RIGHT_EAR": 4,
