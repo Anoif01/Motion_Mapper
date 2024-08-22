@@ -1,6 +1,6 @@
 # Motion Mapper: Pose Estimation and Trajectory Tracking
 
-[![Demo Video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://huggingface.co/spaces/HappyOtter/MotionMapper)  
+[![Demo Video](https://github.com/Anoif01/Motion_Mapper/assets/results/output_football_player1.gif)]  
 **Click the image above to view the demo on Hugging Face Spaces**
 
 ---
