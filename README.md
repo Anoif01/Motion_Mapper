@@ -1,6 +1,5 @@
 # Motion Mapper: Pose Estimation and Trajectory Tracking
-<img src="assets/results/output_football_player1.gif" width="600" />
-**Click the image above to view the demo on Hugging Face Spaces**
+<img src="assets/results/output_football_player1.gif" width="1200" />
 
 ---
 
