@@ -1,6 +1,8 @@
 # Motion Mapper: Pose Estimation and Trajectory Tracking
-<img src="assets/results/output_football_player1.gif" width="1200" />
 
+## Hugging Face Space Demo 🔥🔥🔥
+[Check out the live demo on Hugging Face Spaces](https://huggingface.co/spaces/HappyOtter/MotionMapper)
+<img src="assets/results/output_football_player1.gif" width="1200" />
 ---
 
 ## Overview ⚡⚡⚡
@@ -18,8 +20,7 @@ This tool leverages the power of the **YOLOv8 pose series models** to detect and
     - yolov8l-pose.pt
     - yolov8x-pose.pt
 
-## Hugging Face Space Demo 🔥🔥🔥
-[Check out the live demo on Hugging Face Spaces](https://huggingface.co/spaces/HappyOtter/MotionMapper)
+
 
 ## Getting Started
 
