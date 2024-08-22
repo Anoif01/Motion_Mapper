@@ -16,7 +16,7 @@ import config
 
 
 # Streamlit app title
-st.title("Motion Mapper： a pose estimation and trajectory tracking app")
+st.title("Motion Mapper: a pose estimation and trajectory tracking app")
 
 UPLOAD_DIRECTORY = os.path.join(os.getcwd(), 'assets') # change to your path where save the videos
 

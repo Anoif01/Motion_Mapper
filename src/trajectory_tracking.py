@@ -54,7 +54,7 @@ def update_trajectories(trajectories, unique_skeletons, unique_skeleton_indices,
                 # print('Less than or Same Person!!!')
                 for p in range(len(trajectories)):
                     previous_x, previous_y, previous_yankel = trajectories[p][-3:]
-                    dist = calculate_distance(previous_x, previous_y, x_hip_center, y_hip_center)
+                    dist = calculate_distance(abs(previous_x), abs(previous_y), x_hip_center, y_hip_center)
                     # print(dist)
                     if dist < min_dist:
                         min_dist = dist
@@ -80,7 +80,7 @@ def update_trajectories(trajectories, unique_skeletons, unique_skeleton_indices,
                 updated_person_id = []
                 for p in range(len(trajectories)):
                     previous_x, previous_y, previous_yankel = trajectories[p][-3:]
-                    dist = calculate_distance(previous_x, previous_y, x_hip_center, y_hip_center)
+                    dist = calculate_distance(abs(previous_x), abs(previous_y), x_hip_center, y_hip_center)
                     # print(dist)
                     if dist < min_dist:
                         min_dist = dist
