@@ -32,13 +32,13 @@ This tool leverages the power of the **YOLOv8 pose series models** to detect and
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/YourUsername/Motion_Mapper.git
+    git clone https://github.com/Anoif01/Motion_Mapper.git
     cd Motion_Mapper
     ```
 
 2. **Install required dependencies**:
 
-    Make sure you have a virtual environment activated, then run:
+    Make sure you have a virtual python environment activated, then run:
 
     ```bash
     pip install -r requirements.txt
@@ -46,33 +46,22 @@ This tool leverages the power of the **YOLOv8 pose series models** to detect and
 
 3. **Set up configuration**:
 
-    Open the `src/config.py` file and set the following variables according to your needs:
+    Open the `src/config.py` file and set the following variables according to your needs. Below are the settings that must be changed:
 
     ```python
     # Paths to input and output files
-    video_path = "/assets/exe2.mp4"  # Input video path
-    resize_video_path = "/assets/resize_exe2.mp4"  # Resized video path
+    video_path = "/assets/exemple.mp4"  # Change to your input video path
+    resize_video_path = "/assets/resize_exemple.mp4"  # Change to your resized fps video path
     target_fps = 10  # Target frames per second for processing
-    output_video_path = "/assets/results/yolov8m_exe2.mp4"  # Output video path
+    output_video_path = "/assets/results/output_exemple.mp4"  # Change to your output video path
 
     # YOLO model configuration
     model_name = 'yolov8m-pose.pt'  # Choose your model
-
-    # Video processing parameters
-    resize_shape = (500, 380)  # Resize dimensions (width, height)
-
-    # Visualization settings
-    line_thickness = 15
-    scatter_radius = 15
-    alpha_overlay = 0.65
-
-    # Heatmap settings
-    heatmap_alpha = 0.35
     ```
 
-4. **Place your video in the `assets/` directory**:
+4. **Place your video in the `/assets/` directory**:
 
-    Make sure your video file is placed in the `assets/` directory. The filename should match the `video_path` specified in `config.py`.
+    Make sure your video file is placed in the `/assets/` directory. The filename should match the `video_path` specified in `config.py`.
 
 ### Running the Project
 
