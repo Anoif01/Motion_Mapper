@@ -28,16 +28,16 @@ This tool leverages the power of the **YOLOv8 pose series models** to detect and
 
 ### Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-### Installation
+### 1. Installation
 
-1. **Clone the repository**:
+a. **Clone the repository**:
 
     ```bash
     git clone https://github.com/Anoif01/Motion_Mapper.git
     cd Motion_Mapper
     ```
 
-2. **Install required dependencies**:
+b. **Install required dependencies**:
 
     Make sure you have a virtual python environment activated, then run:
 
@@ -45,7 +45,7 @@ This tool leverages the power of the **YOLOv8 pose series models** to detect and
     pip install -r requirements.txt
     ```
 
-3. **Set up configuration**:
+c. **Set up configuration**:
 
     Open the `src/config.py` file and set the following variables according to your needs. Below are the settings that must be changed:
 
@@ -60,11 +60,11 @@ This tool leverages the power of the **YOLOv8 pose series models** to detect and
     model_name = 'yolov8m-pose.pt'  # Choose your model
     ```
 
-4. **Place your video in the `/assets/` directory**:
+d. **Place your video in the `/assets/` directory**:
 
     Make sure your video file is placed in the `/assets/` directory. The filename should match the `video_path` specified in `config.py`.
 
-### Running the Project
+### 2. Running the Project
 
 After setting up the configuration and placing your video file in the appropriate directory, you can process the video by running:
 
