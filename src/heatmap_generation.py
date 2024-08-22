@@ -9,16 +9,15 @@ Date Created: 2024/8/20
 
 import cv2
 import numpy as np
-from pose_estimation import calculate_distance
+from src.pose_estimation import calculate_distance
 
 def calculate_speeds(trajectories, frame_time):
     """
     Calculate speeds based on trajectories and frame time.
-
+    
     Parameters:
     - trajectories: Dictionary with person IDs as keys and list of points as values.
     - frame_time: Time duration of each frame.
-
     Returns:
     - speeds: Dictionary with person IDs as keys and list of (x, y, y_ankle, speed) tuples as values.
     """
@@ -38,11 +37,10 @@ def calculate_speeds(trajectories, frame_time):
 def create_global_speed_matrix(speeds, img_shape):
     """
     Create a global speed matrix based on the speeds and image shape.
-
+    
     Parameters:
     - speeds: Dictionary with person IDs as keys and list of (x, y, y_ankle, speed) tuples as values.
     - img_shape: Shape of the image (height, width).
-
     Returns:
     - speed_matrix: 2D numpy array representing the speed matrix.
     """

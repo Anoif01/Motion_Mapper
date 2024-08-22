@@ -11,7 +11,7 @@ Date Created: 2024/8/20
 import cv2
 import numpy as np
 import math
-from utils import connections, keypoint_dict
+from src.utils import connections, keypoint_dict
 
 def calculate_distance(x1, y1, x2, y2):
     """

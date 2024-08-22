@@ -12,7 +12,7 @@ Date Created: 2024/8/20
 import cv2
 import numpy as np
 from scipy.ndimage import gaussian_filter1d
-from pose_estimation import calculate_distance
+from src.pose_estimation import calculate_distance
 
 
 def update_trajectories(trajectories, unique_skeletons, unique_skeleton_indices, person_indices, results, frame_id):
