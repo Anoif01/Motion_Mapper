@@ -68,7 +68,7 @@ This tool leverages the power of the **YOLOv8 pose series models** to detect and
 After setting up the configuration and placing your video file in the appropriate directory, you can process the video by running:
 
 ```bash
-python src/main.py
+python main.py
 ```
 
 The processed video, along with trajectories and heatmaps, will be saved to the location specified in output_video_path.
