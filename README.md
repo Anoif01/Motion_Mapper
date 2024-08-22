@@ -1,6 +1,6 @@
 # Motion Mapper: Pose Estimation and Trajectory Tracking
 
-## Hugging Face Space Demo 🔥🔥🔥
+## Demo 🔥🔥🔥
 [Check out the live demo on Hugging Face Spaces](https://huggingface.co/spaces/HappyOtter/MotionMapper)
 
 <img src="assets/results/output_football_player1.gif" width="1200" />
