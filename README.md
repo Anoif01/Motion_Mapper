@@ -1,15 +1,18 @@
 # Motion Mapper: Pose Estimation and Trajectory Tracking
 
+
+## Overview ⚡⚡⚡
+**Motion Mapper** is a comprehensive tool for pose estimation, trajectory tracking, and movement heatmap visualization in **fixed-angle** sports videos. 
+This tool leverages the power of the **YOLOv8 pose series models** to detect and analyze human poses, visualize trajectories, and generate heatmaps to highlight areas of intense activity.
+
+---
+
 ## Demo 🔥🔥🔥
 [Check out the live demo on Hugging Face Spaces](https://huggingface.co/spaces/HappyOtter/MotionMapper)
 
 <img src="assets/results/output_football_player1.gif" width="1200" />
 
 ---
-
-## Overview ⚡⚡⚡
-**Motion Mapper** is a comprehensive tool for pose estimation, trajectory tracking, and movement heatmap visualization in **fixed-angle** sports videos. 
-This tool leverages the power of the **YOLOv8 pose series models** to detect and analyze human poses, visualize trajectories, and generate heatmaps to highlight areas of intense activity.
 
 ## Key Features 🌟🌟🌟
 - **Pose Estimation**: Accurate human pose detection using YOLOv8 pose models.
