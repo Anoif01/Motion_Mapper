@@ -36,30 +36,30 @@ a. **Clone the repository**:
 ```bash
 git clone https://github.com/Anoif01/Motion_Mapper.git
 cd Motion_Mapper
-    
+``` 
 
 b. **Install required dependencies**:
 
     Make sure you have a virtual python environment activated, then run:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 c. **Set up configuration**:
 
     Open the `src/config.py` file and set the following variables according to your needs. Below are the settings that must be changed:
 
-    ```python
-    # Paths to input and output files
-    video_path = "/assets/exemple.mp4"  # Change to your input video path
-    resize_video_path = "/assets/resize_exemple.mp4"  # Change to your resized fps video path
-    target_fps = 10  # Target frames per second for processing
-    output_video_path = "/assets/results/output_exemple.mp4"  # Change to your output video path
+```python
+# Paths to input and output files
+video_path = "/assets/exemple.mp4"  # Change to your input video path
+resize_video_path = "/assets/resize_exemple.mp4"  # Change to your resized fps video path
+target_fps = 10  # Target frames per second for processing
+output_video_path = "/assets/results/output_exemple.mp4"  # Change to your output video path
 
-    # YOLO model configuration
-    model_name = 'yolov8m-pose.pt'  # Choose your model
-    ```
+# YOLO model configuration
+model_name = 'yolov8m-pose.pt'  # Choose your model
+```
 
 d. **Place your video in the `/assets/` directory**:
 
