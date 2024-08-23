@@ -36,7 +36,7 @@ a. **Clone the repository**:
     ```bash
     git clone https://github.com/Anoif01/Motion_Mapper.git
     cd Motion_Mapper
-    ```
+    
 
 b. **Install required dependencies**:
 
