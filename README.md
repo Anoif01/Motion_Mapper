@@ -40,7 +40,7 @@ cd Motion_Mapper
 
 b. **Install required dependencies**:
 
-    Make sure you have a virtual python environment activated, then run:
+Make sure you have a virtual python environment activated, then run:
 
 ```bash
 pip install -r requirements.txt
@@ -48,7 +48,7 @@ pip install -r requirements.txt
 
 c. **Set up configuration**:
 
-    Open the `src/config.py` file and set the following variables according to your needs. Below are the settings that must be changed:
+Open the `src/config.py` file and set the following variables according to your needs. Below are the settings that must be changed:
 
 ```python
 # Paths to input and output files
@@ -63,7 +63,7 @@ model_name = 'yolov8m-pose.pt'  # Choose your model
 
 d. **Place your video in the `/assets/` directory**:
 
-    Make sure your video file is placed in the `/assets/` directory. The filename should match the `video_path` specified in `config.py`.
+Make sure your video file is placed in the `/assets/` directory. The filename should match the `video_path` specified in `config.py`.
 
 ### 2. Running the Project
 
