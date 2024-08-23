@@ -9,10 +9,10 @@ Date Created: 2024/8/20
 """
 
 # Paths to input and output files
-video_path = "./assets/walker.mp4"
-resize_video_path = "./assets/resize_walker.mp4"
+video_path = "./assets/football_player1.mp4"
+resize_video_path = "./assets/resize_football_player1.mp4"
 target_fps = 10
-output_video_path = "./assets/results/output_walker.mp4"
+output_video_path = "./assets/results/output_football_player1.mp4"
 
 # YOLO model configuration, chek for more options https://docs.ultralytics.com/tasks/pose/?h=pose
 model_name = 'yolov8m-pose.pt'
