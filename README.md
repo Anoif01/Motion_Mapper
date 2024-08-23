@@ -33,9 +33,9 @@ This tool leverages the power of the **YOLOv8 pose series models** to detect and
 
 a. **Clone the repository**:
 
-    ```bash
-    git clone https://github.com/Anoif01/Motion_Mapper.git
-    cd Motion_Mapper
+```bash
+git clone https://github.com/Anoif01/Motion_Mapper.git
+cd Motion_Mapper
     
 
 b. **Install required dependencies**:
